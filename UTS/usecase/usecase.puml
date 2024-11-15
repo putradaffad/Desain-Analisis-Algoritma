@@ -1,0 +1,20 @@
+@startuml usecase
+actor Admin
+
+rectangle "Sistem Manajemen Pelanggan" {
+  Admin -- (Login)
+  Admin -- (Tambah Pelanggan)
+  Admin -- (Edit Pelanggan)
+  Admin -- (Hapus Pelanggan)
+  Admin -- (Cari & Filter Data)
+  Admin -- (Generate Laporan)
+}
+
+(Login) --> (Admin) : Login ke Sistem
+(Tambah Pelanggan) --> (Admin) : Menambah Data Pelanggan
+(Edit Pelanggan) --> (Admin) : Mengedit Data Pelanggan
+(Hapus Pelanggan) --> (Admin) : Menghapus Data Pelanggan
+(Cari & Filter Data) --> (Admin) : Mencari Data Pelanggan
+(Generate Laporan) --> (Admin) : Mengunduh Data Pelanggan
+
+@enduml

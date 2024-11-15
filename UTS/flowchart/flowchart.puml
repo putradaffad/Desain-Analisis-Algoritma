@@ -1,0 +1,29 @@
+@startuml flowchart
+start
+:Admin Login;
+if (Login Valid?) then (Yes)
+    :Dashboard Admin;
+    :Pilih Fitur Manajemen Pelanggan;
+    if (Tambah Pelanggan?) then (Yes)
+        :Isi Form Pelanggan;
+        :Simpan Data Pelanggan;
+    else if (Edit Pelanggan?) then (Yes)
+        :Pilih Pelanggan untuk Diedit;
+        :Edit Data Pelanggan;
+        :Simpan Perubahan;
+    else if (Hapus Pelanggan?) then (Yes)
+        :Pilih Pelanggan untuk Dihapus;
+        :Hapus Data Pelanggan;
+    else if (Cari & Filter Data?) then (Yes)
+        :Cari Berdasarkan Nama, Email, atau Lokasi;
+        :Tampilkan Hasil Pencarian;
+    else if (Generate Laporan?) then (Yes)
+        :Ekspor Data Pelanggan dalam Format CSV/PDF;
+    endif
+    :Logout;
+else (No)
+    :Tampilkan Pesan Error;
+    :Kembali ke Login;
+endif
+stop
+@enduml
