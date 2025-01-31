@@ -1,0 +1,18 @@
+@startuml flowchart
+start
+:Pengguna Isi Form Pendaftaran;
+:Verifikasi Email;
+if (Email Terverifikasi?) then (ya)
+  :Pengguna Lengkapi Profil;
+  :Pendaftaran Selesai;
+else (tidak)
+  :Tunggu Verifikasi Email;
+  if (Email Terverifikasi?) then (ya)
+    :Pengguna Lengkapi Profil;
+    :Pendaftaran Selesai;
+  else
+    :Tunggu Verifikasi Email lagi;
+  endif
+endif
+stop
+@enduml

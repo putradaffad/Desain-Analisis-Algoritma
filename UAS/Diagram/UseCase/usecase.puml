@@ -1,0 +1,18 @@
+@startuml usecase
+
+actor Admin
+actor User
+actor Instruktur
+
+(Manajemen Kursus) <-- Admin
+(Laporan) <-- Admin
+
+(Pendaftaran Kursus) <-- User
+(Mengikuti Kursus) <-- User
+(Mengerjakan Kuis) <-- User
+(Menerima Sertifikat) <-- User
+
+(Menyusun Materi Kursus) <-- Instruktur
+(Menilai Tugas/Kuis) <-- Instruktur
+
+@enduml

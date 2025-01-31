@@ -1,0 +1,23 @@
+@startuml Activity
+start
+:Pengguna mengisi form pendaftaran;
+:Pengguna menerima email verifikasi;
+:Pengguna mengisi profil dan mulai kursus;
+if (Pengguna sudah memilih kursus?) then (ya)
+  :Pengguna mengakses modul dan materi;
+  :Pengguna mengerjakan kuis atau tugas;
+  :Pengguna menerima umpan balik;
+  :Progres tercatat;
+else (tidak)
+  :Pengguna memilih kursus terlebih dahulu;
+  :Kembali ke pemilihan kursus;
+endif
+:Progres diperiksa;
+if (Kursus selesai?) then (ya)
+  :Sertifikat diterbitkan;
+else (tidak)
+  :Progres belum selesai;
+  :Menunggu penyelesaian kursus;
+endif
+stop
+@enduml
